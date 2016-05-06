@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><style>.a{clip-path:url(#SVGID_2_);}</style><defs><rect width="16" height="16"/></defs><clipPath><use xlink:href="#SVGID_1_"/></clipPath><path d="M14.5 0h-13C0.7 0 0 0.7 0 1.5S0.7 3 1.5 3h13c0.8 0 1.5-0.7 1.5-1.5S15.3 0 14.5 0" class="a"/><path d="M14.5 13h-13C0.7 13 0 13.7 0 14.5S0.7 16 1.5 16h13c0.8 0 1.5-0.7 1.5-1.5S15.3 13 14.5 13" class="a"/><path d="M14.5 6.5h-13C0.7 6.5 0 7.2 0 8S0.7 9.5 1.5 9.5h13c0.8 0 1.5-0.7 1.5-1.5S15.3 6.5 14.5 6.5" class="a"/></svg>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xml:space="preserve">
+	<path d="M14.484,0h-13C0.665,0,0,0.68,0,1.5S0.665,3,1.484,3h13c0.82,0,1.484-0.68,1.484-1.5
+		S15.305,0,14.484,0"/>
+	<path d="M14.484,13h-13C0.665,13,0,13.68,0,14.5S0.665,16,1.484,16h13c0.82,0,1.484-0.68,1.484-1.5
+		S15.305,13,14.484,13"/>
+	<path d="M14.5,6.5h-13C0.68,6.5,0.016,7.18,0.016,8S0.68,9.5,1.5,9.5h13c0.82,0,1.484-0.68,1.484-1.5
+		S15.32,6.5,14.5,6.5"/>
+</svg>

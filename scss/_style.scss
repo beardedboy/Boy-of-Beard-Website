@@ -23,6 +23,19 @@ body{
 	height: 47px;
 }
 
+.main_logo_link {
+  position: relative;
+  display: inline-block; 
+}
+.main_logo_link:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+
 
 @media screen and (min-width: 600px){
 	.main_logo{

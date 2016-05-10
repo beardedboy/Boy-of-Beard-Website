@@ -1,0 +1,22 @@
+/*** Footer **********************/
+
+
+.main_footer{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: space-between;
+}
+
+.footer_menu{
+	list-style-type: none;
+	display: block;
+}
+
+.footer_menu_item{
+	display: inline;
+}
+
+.footer_menu_item_title{}
+
+.footer_menu_item_link{}

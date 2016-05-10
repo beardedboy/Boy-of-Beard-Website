@@ -1,0 +1,225 @@
+/*** Main Navigation **********************/
+
+.main_nav_link-no_js{
+	display: block;
+}
+
+.main_nav{}
+
+.main_nav_list{
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	overflow-y: auto;
+	background-color: black;
+}
+
+.main_nav_list_item{}
+
+.main_nav_list_item_link{
+	display: block;
+	width: 100%;
+	padding: 2em 0;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 2px;
+	&:hover{
+		background-color: gray;
+	}
+}
+
+.main_nav_list_item_link_icon{
+	display: none;
+}
+
+.main_nav_list_item_link_title{}
+
+
+.js .main_nav-active .main_nav_list{
+	display: block;
+}
+
+
+@media screen and (min-width: 600px){
+
+	.main_nav{
+		position: absolute;
+		z-index: 2;
+	  	top: 1.6em;
+	  	right: 2em;
+
+	}
+
+
+	.main_nav-stretch_bg{
+	  position: absolute;
+	  z-index: 1;
+	  top: 0;
+	  right: 0;
+	  width: 60px;
+	  height: 60px;
+	  border-radius: 30px;
+	  transition: height 0.2s;
+	}
+
+
+	.main_nav_list{
+		position: relative;
+		visibility: hidden;
+		display: none;
+		list-style-type: none;
+		background-color: inherit;
+		overflow-y: inherit; 
+		padding: 0 0 2em 0;
+		margin: 0;
+		z-index: 4;
+	}
+
+
+
+	.main_nav_list_item:hover:before{
+		position: absolute;
+	    content: '';
+	    background-color: yellow;
+	    width: 5px;
+	    height: 48px;
+	}
+
+
+
+	.main_nav_list_item_link{
+		position: relative;
+		display: block;
+		padding: 16px 22px;
+		width: inherit;
+
+		&:hover{
+			background-color: inherit;
+		}
+	}
+
+	.main_nav_list_item_link_icon{
+		fill: white;
+		width: 16px;
+		display: block;
+	}
+
+	.main_nav_list_item_link_title{
+		visibility: hidden;
+		display: block;
+		position: absolute;
+		right: 60px;
+		top: 0;
+		color: black;
+		opacity: .25;
+		padding: 1em 1.5em;
+		font-size: 14px;
+		transition: right .25s;
+		background-color: yellow;
+		text-transform: lowercase;
+	}
+
+	.main_nav_list_item:hover .main_nav_list_item_link_title{
+		visibility: visible;
+		opacity: 1;
+		right: 70px;
+	}
+
+	.js .main_nav-active .main_nav-stretch_bg, .no-js .main_nav:hover .main_nav-stretch_bg{
+		background-color: black;
+		height: 100%;
+	}
+
+	.js .main_nav-active .main_nav_list, .no-js .main_nav:hover .main_nav_list{
+		visibility: visible;
+		display: block;
+	}
+
+
+
+}
+
+/*** Hamburger Icon **********************/
+
+.main_nav_icon{
+	cursor: pointer;
+	width: 16px;
+	padding: 22px;
+	fill: black;
+}
+
+.main_nav_icon-top{
+	transform-origin: 0px 19px;
+}
+
+.main_nav_icon-bottom{
+	transform-origin: 0px 44px;
+}
+
+.main_nav_icon-top, .main_nav_icon-bottom{
+	transition: transform .5s;
+	transform: rotate(0);
+}
+.main_nav_icon-middle{
+	transition: opacity .5s;
+	opacity: 1;
+}
+
+.main_nav_icon-bottom{}
+
+.main_nav_close{
+	text-align: right;
+	//display: none;
+}
+
+.main_nav_close_icon{
+	fill: white;
+	width: 16px;
+	padding: 1em;
+}
+
+@media screen and (min-width: 600px){
+
+	.main_nav_icon{
+		position: relative;
+		z-index: 3;
+	}
+
+	.main_nav_close_icon{
+		display: none;
+	}
+
+	.no-js .main_nav:hover .main_nav_icon-top, .main_nav-active .main_nav_icon-top{
+		fill: white;
+	    transform: rotate(45deg);
+	}
+
+	.no-js .main_nav:hover .main_nav_icon-middle, .main_nav-active .main_nav_icon-middle{
+		opacity: 0;
+	}
+
+	.no-js .main_nav:hover .main_nav_icon-bottom, .main_nav-active .main_nav_icon-bottom{
+		fill: white;
+	    transform: rotate(-45deg);
+	}
+
+
+
+	.js .main_nav-active .main_nav_icon-top{
+		transform: rotate(45deg);
+	}
+
+	.js .main_nav-active .main_nav_icon-bottom{
+		transform: rotate(-45deg);
+	}
+
+}

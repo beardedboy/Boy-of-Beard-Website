@@ -1,0 +1,11 @@
+/*** Helpers ********************************/
+
+.no_scroll-sm_only{
+	overflow-y: hidden;
+}
+
+@media screen and (min-width: 600px){
+	.no_scroll-sm_only{
+		overflow-y: auto;
+	}
+}

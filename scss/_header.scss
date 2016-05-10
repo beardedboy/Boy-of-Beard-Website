@@ -1,0 +1,44 @@
+.main_header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .5em 0 1em 1em;
+}
+
+.main_logo{
+	width: 26px;
+}
+
+.main_logo_link {
+  position: relative;
+  display: inline-block; 
+  height: 30px;
+}
+
+.main_logo_link:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+
+
+@media screen and (min-width: 600px){
+	.main_logo{
+		width: 40px;
+	}
+
+	.main_logo_link{
+		height: 47px;
+	}
+
+	.main_header{
+		padding: 2em 1em 2em 2em;
+	}
+}
+
+.main_title{
+
+}

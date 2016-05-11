@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol id = "scrapbook-icon" viewBox="0 0 16 16">
+		<style>.a{fill:#FFF;}</style>
+		<rect width="7" height="7" class="a"/>
+		<rect x="9" width="7" height="7" class="a"/>
+		<rect y="9" width="7" height="7" class="a"/>
+		<rect x="9" y="9" width="7" height="7" class="a"/>
+	</symbol>
+	<symbol id = "about-icon" viewBox="0 0 16 16">
+		<style>.b{fill:#FFFF00;}</style>
+		<rect width="7" height="7" class="b"/>
+		<rect x="9" width="7" height="7" class="b"/>
+		<rect y="9" width="7" height="7" class="b"/>
+		<rect x="9" y="9" width="7" height="7" class="b"/>
+	</symbol>
+	<symbol id = "blog-icon" viewBox="0 0 16 16">
+		<style>.c{fill:#FF0000;}</style>
+		<rect width="7" height="7" class="c"/>
+		<rect x="9" width="7" height="7" class="c"/>
+		<rect y="9" width="7" height="7" class="c"/>
+		<rect x="9" y="9" width="7" height="7" class="c"/>
+	</symbol>
+</svg>

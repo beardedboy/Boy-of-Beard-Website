@@ -15,11 +15,17 @@
 	width: 100%;
 }
 
+.js .footer_menu{
+	display: none;
+}
+
 .footer_menu_item{
 	text-align: center;
 }
 
 .footer_menu_item_title{}
+
+
 
 .footer_menu_item_link{
 	text-decoration: none;
@@ -28,8 +34,6 @@
 	padding: 1em 0;
 	color: black;
 }
-
-
 
 
 .copyright_notice{
@@ -44,10 +48,16 @@
 	.main_footer{
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 2em 1em 1em 1em;
+		padding: 2em 3em;
+		font-size: 12px;
 	}
 
 	.footer_menu{
+		display: inline;
+		width: auto;
+	}
+
+	.js .footer_menu{
 		display: inline;
 		width: auto;
 	}

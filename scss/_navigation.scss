@@ -78,6 +78,8 @@
 
 @media screen and (min-width: 600px){
 
+	.nav_container{}
+
 	.main_nav{
 		position: absolute;
 		z-index: 2;
@@ -245,7 +247,7 @@
 		position: relative;
 	}
 
-	.main_nav_close_icon{
+	.main_nav_close{
 		display: none;
 	}
 
@@ -273,4 +275,13 @@
 		transform: rotate(-45deg);
 	}
 
+	.main_nav_list_item_link_icon{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+	}
+
+	.main_nav_list_item_link_icon-blog{
+		background-image: url("../img/newicons.svg#white");
+	}
 }

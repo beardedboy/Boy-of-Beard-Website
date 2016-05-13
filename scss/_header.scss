@@ -11,10 +11,10 @@
 .main_logo_link {
   	position: relative;
   	display: inline-block; 
-	height: 60px;
 	width: 60px;
 	padding: 15px;
 	text-align: center;
+	line-height: 0;
 }
 
 .main_logo_link:after {
@@ -43,7 +43,6 @@
 	}
 
 	.main_logo_link{
-		height: 45.89px;
     	width: 40px;
     	padding: 0;
 	}

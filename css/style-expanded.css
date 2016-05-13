@@ -2721,10 +2721,10 @@ h2 {
 .main_logo_link {
   position: relative;
   display: inline-block;
-  height: 60px;
   width: 60px;
   padding: 15px;
   text-align: center;
+  line-height: 0;
 }
 
 .main_logo_link:after {
@@ -2752,7 +2752,6 @@ h2 {
   }
 
   .main_logo_link {
-    height: 45.89px;
     width: 40px;
     padding: 0;
   }
@@ -3085,27 +3084,31 @@ h2 {
 }
 
 .scrapbook_img {
-  display: inline-block;
-  background-color: lightgray;
+  position: relative;
   height: 187px;
   flex-basis: 50%;
   overflow: hidden;
 }
-.scrapbook_img:hover {
-  background-color: gray;
+.scrapbook_img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 235, 59, 0.1);
+}
+.scrapbook_img:hover:after {
+  background-color: transparent;
 }
 
 .scrapbook_img img {
   width: 100%;
+  height: auto;
 }
 
 .scrapbook_container_btn-close, .scrapbook_img_info {
   display: none;
-}
-
-.scrapbook_img_info {
-  transform: translateY(0);
-  transition: transform 1s;
 }
 
 /** Active States *****************************/
@@ -3124,19 +3127,25 @@ h2 {
 }
 
 .scrapbook_container-is_active .scrapbook_img {
-  background-color: #d3d3d3;
   flex: 0 0 100%;
   height: inherit;
   cursor: default;
+}
+.scrapbook_container-is_active .scrapbook_img:after {
+  content: none;
+}
+
+.scrapbook_container-is_active .scrapbook_img img {
+  width: auto;
 }
 
 .scrapbook_container-is_active .scrapbook_img_info {
   display: block;
   position: absolute;
   width: 100%;
-  height: 100px;
   padding: 1em;
-  background-color: grey;
+  background-color: lightgrey;
+  bottom: 0;
   z-index: 3;
 }
 
@@ -3148,6 +3157,9 @@ h2 {
   z-index: 3;
   padding: 1em;
   text-align: right;
+}
+.scrapbook_container-is_active .scrapbook_container_btn-close:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 600px) {
@@ -3196,6 +3208,7 @@ h2 {
 .copyright_notice {
   font-size: 12px;
   text-align: left;
+  width: 100%;
   padding: 2em;
 }
 
@@ -3233,6 +3246,7 @@ h2 {
 
   .copyright_notice {
     padding: 0;
+    width: inherit;
   }
 }
 /* ==========================================================================

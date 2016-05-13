@@ -7,6 +7,11 @@
     @include make-container();
 }
 
+.container-no_padding{
+	max-width: 1140px;
+	@include make-container(null, 1140px, 0);
+}
+
 .container{
     max-width: $container-width;
 }

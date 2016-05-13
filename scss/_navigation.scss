@@ -6,6 +6,7 @@
 	display: none;
 	list-style-type: none;
 	position: absolute;
+	z-index: 4;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -189,6 +190,7 @@
 	position: relative;
     display: inline-block; 
 	padding: 22px;
+	height: 60px;
 	z-index: 3;
 }
 
@@ -236,9 +238,17 @@
 	cursor: pointer;
 }
 
-.main_nav_close_icon{
-	fill: white;
+
+[class ^= "icon-"]{
 	width: 16px;
+}
+
+.icon-white{
+	fill: white;
+}
+
+.icon-black{
+	fill: black;
 }
 
 @media screen and (min-width: 600px){
@@ -285,3 +295,55 @@
 		background-image: url("../img/newicons.svg#white");
 	}
 }
+
+
+@media screen and (min-width: 1000px){
+	.main_nav{
+		position: static;
+	}
+
+	.main_nav_link{
+		display: none;
+	}
+
+	.main_nav_list{
+		position: static;
+    	visibility: visible;
+    	display: block;
+    	padding: 0;
+	}
+	
+	.main_nav_list_item{
+		display: inline-block;
+		&:hover:before{
+			position: static;
+		}
+	}
+
+	.main_nav_list_item_link{}
+
+	.main_nav_list_item_link_title{
+		position: static;
+    	padding: 0;
+    	visibility: visible;
+    	background-color: transparent;
+    	opacity: 1;
+    	font-size: 16px;
+    	font-weight: 500;
+	}
+
+	.main_nav_list_item_link_icon{
+		display: none;
+	}
+
+	.main_nav-stretch_bg{
+		display: none;
+	}
+
+}
+
+
+
+
+
+

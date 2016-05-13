@@ -2,7 +2,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: .5em 0 1em 1em;
 }
 
 .main_logo{
@@ -10,9 +9,12 @@
 }
 
 .main_logo_link {
-  position: relative;
-  display: inline-block; 
-  height: 30px;
+  	position: relative;
+  	display: inline-block; 
+	height: 60px;
+	width: 60px;
+	padding: 15px;
+	text-align: center;
 }
 
 .main_logo_link:after {
@@ -25,11 +27,13 @@
 }
 
 .main_title{
-	font-size: 1em;
+    font-size: 1em;
     margin: 0;
-    font-weight: 700;
+    padding: 2em;
+    font-weight: 100;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 14px;
+    text-align: center;
 }
 
 
@@ -39,10 +43,12 @@
 	}
 
 	.main_logo_link{
-		height: 47px;
+		height: 45.89px;
+    	width: 40px;
+    	padding: 0;
 	}
 
 	.main_header{
-		padding: 2em 1em 2em 2em;
+		padding: 2em;
 	}
 }

@@ -61,7 +61,7 @@ module.exports = function(grunt){
          },
          watch: {
              scripts: {
-                 files: ['scss/*.scss' ],
+                 files: ['scss/*.scss', 'scss/*/*.scss' ],
                  tasks: ['sass', 'postcss:dist', 'cssnano'],
                  options: {
                      livereload: true,

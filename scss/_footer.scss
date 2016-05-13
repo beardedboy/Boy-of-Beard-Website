@@ -38,13 +38,14 @@
 
 .copyright_notice{
 	font-size: 12px;
-	text-align: center;
-	padding: 3em 0 1em 0;
+	text-align: left;
+	padding: 2em;
 }
 
 
 
 @media screen and (min-width: 600px){
+
 	.main_footer{
 		flex-direction: row;
 		justify-content: space-between;

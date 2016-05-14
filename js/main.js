@@ -22,7 +22,7 @@
 
 	/*** SCRAPBOOK ***********************/
 
-	var scrapbookClose = document.getElementById('js-close_scrapbook_container'),
+	/*var scrapbookClose = document.getElementById('js-close_scrapbook_container'),
 		scrapbookContainer = document.getElementById('js-scrapbook_container'),
 		scrapbookImages = document.getElementsByClassName('scrapbook_img'),
 		scrapbookImageContainer = document.getElementById('js-scrapbook_img_container');
@@ -55,7 +55,7 @@
 			}
 
 		}
-
+	*/
 
 
 

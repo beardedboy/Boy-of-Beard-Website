@@ -3,73 +3,97 @@
 
 
 .main_footer{
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
+	padding: 2em 1em 2em 2em;
+	font-size: 12px;
 }
+
+.no-js .main_footer{
+	//flex-direction: column-reverse;
+	//align-items: center;
+}
+
+.js .main_footer{
+	//flex-direction: row;
+}
+
+.sub_footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 
 .footer_menu{
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	width: 100%;
 }
 
-.js .footer_menu{
-	display: none;
+.no-js .footer_menu-main{
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    padding: 1em 0 3em 0;
+}
+
+.no-js .footer_menu-main .footer_menu_item{
+    flex: 0 0 50%;
+}
+
+.no-js .footer_menu-main .footer_menu_item_link{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.footer_menu-social{
+	line-height: 1;
 }
 
 .footer_menu_item{
-	text-align: center;
+	display: inline-block;
 }
-
-.footer_menu_item_title{}
-
 
 
 .footer_menu_item_link{
 	text-decoration: none;
-	display: block;
-	width: 100%;
-	padding: 1em 0;
 	color: black;
+	padding-left: 1em;
+	padding-right: 1em;
+	display: inline-block;
+	line-height: 1;
 }
 
 
 .copyright_notice{
 	font-size: 12px;
 	text-align: left;
-	width: 100%;
-	padding: 2em;
+}
+
+
+// Visibility
+
+.js .footer_menu-main{
+	display: none;
+}
+
+.copyright_notice_title{
+	display: none;
+}
+
+.footer_menu_item_link_title{
+	display: none;
 }
 
 
 
 @media screen and (min-width: 600px){
 
-	.main_footer{
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 2em 3em;
-		font-size: 12px;
-	}
-
-	.footer_menu{
-		display: inline;
-		width: auto;
-	}
-
-	.js .footer_menu{
-		display: inline;
-		width: auto;
+	.no-js .footer_menu-main{
+		display: none;
 	}
 
 	.footer_menu_item, .footer_menu_item_title{
-		display: inline;
-	}
-
-	.footer_menu_item_link{
-		padding: 0 1em;
 		display: inline;
 	}
 
@@ -78,8 +102,25 @@
 		font-size: 18px;
 	}
 
+	.footer_menu-social{
+		line-height: inherit;
+	}
+
+
 	.copyright_notice{
 		padding: 0;
 		width: inherit;
+	}
+	
+	.copyright_notice_title{
+		display: inline;
+	}
+
+	.footer_menu_item_link_icon{
+		display: none;
+	}
+
+	.footer_menu_item_link_title{
+		display: block;
 	}
 }

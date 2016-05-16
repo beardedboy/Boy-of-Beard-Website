@@ -5,9 +5,13 @@
 }
 
 .modal-active{
-	display: block;
-	position: relative;
-	z-index: 100;
+	position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-close{
@@ -26,27 +30,29 @@
 
 .modal_main{
 	position: fixed;
-	z-index: 5;
-	top: 0;
-	right: 0;
 	left: 0;
-	bottom: 0;
+    z-index: 5;
+    background-color: black;
+    width: 70vw;
+    height: 80vh;
+    margin: 10vh 15vw;
+    box-shadow: 0 2px 2px rgba(0,0,0,.3);
 
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+    display: flex;
+    flex-direction: row;
 
-	overflow: hidden;
-	background-color: white;
-	margin: 2em;
-	box-shadow: 0 2px 2px rgba(0,0,0,.3);
 }
 
 
-.modal_main_img{}
+.modal_main_img{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 .fillwidth { 
   width: 100%; 
@@ -59,18 +65,22 @@
 
 
 .modal_main_content{
-	text-align: center;
-    /* flex-basis: 50%; */
-    height: 100%;
-    margin: 0 auto;
-    overflow: scroll;
+	position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1; 
+    overflow: hidden;
+    justify-content: center;
+    background-color: black;
+
+    margin: 2em;
 }
 
 .modal_main_sidebar{
     background-color: #add8e6;
     padding: 2em;
+    flex-basis: 25em; 
     overflow: auto;
-    flex: 0 0 50%;
 }
 
 
@@ -88,8 +98,8 @@
 
 @media screen and (min-width: 800px){
 	.modal_main{
-		flex-direction: row;
+		/*flex-direction: row;
 		margin: 5em auto;
-    	width: 707px;
+    	width: 707px;*/
 	}
 }

@@ -6,6 +6,12 @@
 	width: 16px;
 }
 
+.icon-sm{
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+}
+
 .icon-github{
 	background: url("../img/icons.svg#github") no-repeat left top;
 }
@@ -20,4 +26,8 @@
 
 .icon-email{
 	background: url("../img/icons.svg#email") no-repeat left top;
+}
+
+.icon-cross{
+	background: url("../img/icons.svg#cross") no-repeat left top;
 }

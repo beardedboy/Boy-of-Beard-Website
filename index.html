@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div id = "js-root">
+    <div id = "js-root" class = "root">
       <header class = "main_header">
         <a class = "main_logo_link" href="index.html">
           <object type="image/svg+xml" data="img/mainlogo.svg" class="main_logo">
@@ -25,7 +25,7 @@
         <div class = "nav_container">
           <nav class = "main_nav" id = "js-main_nav">
             <a href="#menu-no_js" class = "main_nav_link" id = "js-main_nav_icon">
-              <svg class = "main_nav_icon" id = "js-main_nav_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              <svg class = "icon-black" id = "js-main_nav_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              viewBox="0 0 64 64" xml:space="preserve">
                 <path class = "main_nav_icon-top" d="M57.9,0h-52C2.7,0,0,2.7,0,6c0,3.3,2.7,6,5.9,6h52c3.3,0,5.9-2.7,5.9-6C63.9,2.7,61.2,0,57.9,0z"/>
                 <path class = "main_nav_icon-bottom" d="M57.9,52h-52C2.7,52,0,54.7,0,58c0,3.3,2.7,6,5.9,6h52c3.3,0,5.9-2.7,5.9-6C63.9,54.7,61.2,52,57.9,52z"/>
@@ -34,26 +34,8 @@
             </a>
             <ul class = "main_nav_list">
               <li class = "main_nav_close" id = "js-main_nav_close_icon">
-                <svg class = "main_nav_close_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 viewBox="0 0 64 64" xml:space="preserve">
-                <path d="M54.6,46.1L17.8,9.4c-2.3-2.3-6.1-2.3-8.4,0c-2.3,2.3-2.4,6.1,0,8.4l36.8,36.8c2.3,2.3,6.1,2.3,8.4,0
-                C56.8,52.3,56.9,48.5,54.6,46.1z"/>
-                <path d="M46.1,9.4L9.3,46.1c-2.3,2.3-2.3,6.1,0,8.4c2.3,2.3,6.1,2.4,8.4,0l36.8-36.8c2.3-2.3,2.3-6.1,0-8.4
-                C52.2,7.1,48.4,7.1,46.1,9.4z"/>
-                </svg>
+                <div class = "icon-sm icon-cross"></div>
               </li>
-              <!--<li class = "main_nav_list_item">
-                <a class = "main_nav_list_item_link" href="#" data-title="about">
-                  <span class = "main_nav_list_item_link_title">About</span>
-                  <svg class = "main_nav_list_item_link_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xml:space="preserve">
-                    <path  fill="#FFFFFF" d="M7.997,0.89c0.312,0,0.882-0.355,1.157-0.354
-                      c0.704,0.004,1.296,1.342,2.008,1.342C12.073,1.878,11.836,0,12.438,0c0.849,0,2.675,4.828,2.523,7.428
-                      c-0.193,7.71-11.083,9.753-11.083,7.971c0-0.43,0.996-0.717,0.996-1.399c0-1.254-3.842-1.917-3.842-6.675
-                      C0.926,4.189,2.678,0,3.549,0c0.623,0,0.34,1.878,1.276,1.878c0.604,0,1.272-1.342,2.008-1.342C7.368,0.54,7.614,0.89,7.997,0.89"
-                      />
-                  </svg>
-                </a>
-              </li>-->
               <li class = "main_nav_list_item">
                 <a class = "main_nav_list_item_link" href="#" data-title="blog">
                   <span class = "main_nav_list_item_link_title">Blog</span>
@@ -63,28 +45,15 @@
               <li class = "main_nav_list_item">
                 <a class = "main_nav_list_item_link" href="scrapbook.html" data-title="scrapbook">
                   <span class = "main_nav_list_item_link_title">Scrapbook</span>
-
-                  <svg class = "main_nav_list_item_link_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
-                    <ellipse cx="15.901" cy="16" rx="15.901" ry="16"/>
-                  </svg>
+                  <div class = "main_nav_list_item_link_icon main_nav_list_item_link_icon-scrapbook"></div>
                 </a>
               </li>
               <li class = "main_nav_list_item">
                 <a class = "main_nav_list_item_link" href="#" data-title="projects">
                   <span class = "main_nav_list_item_link_title">Projects</span>
-                  <svg class = "main_nav_list_item_link_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
-                    <ellipse cx="15.901" cy="16" rx="15.901" ry="16"/>
-                  </svg>
+                  <div class = "main_nav_list_item_link_icon main_nav_list_item_link_icon-projects"></div>
                 </a>
               </li>
-              <!--<li class = "main_nav_list_item">
-                <a class = "main_nav_list_item_link" href="#" data-title="contact">
-                  <span class = "main_nav_list_item_link_title">Contact</span>
-                  <svg class = "main_nav_list_item_link_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
-                    <ellipse cx="15.901" cy="16" rx="15.901" ry="16"/>
-                  </svg>
-                </a>
-              </li>-->
             </ul><!-- END main_nav_list -->
             <span class = "main_nav-stretch_bg" aria-hidden="true"></span>
           </nav><!-- END main_nav -->
@@ -92,22 +61,51 @@
       </header><!-- END main_header -->
 
       <section class = "container">
-        <h1 class = "main_title">Homepage</h1>
         <section class = "main_intro">
           <h1 class = "main_intro_title">Hi, welcome to my site.  I'm a <b>full stack web developer</b> based in <b>Bristol, UK</b>.  Feel free to check out my latest <a class = "main_intro_link" href="#">projects</a>, read my <a class = "main_intro_link" href="#">blog</a> or send me a <a class = "main_intro_link" href="#">message</a></h1>
         </section>
       </section> <!-- container -->
+        
+      </section> <!-- END container -->
 
       <footer class = "main_footer" id="menu-no_js">
-          <span class = "copyright_notice">Copyright &copy; 2016 Mark Rudman</span>
-          <ul class = "footer_menu">
-            <li class = "footer_menu_item"><h2 class = "footer_menu_item_title">Menu</h2></li>
+          <ul class = "footer_menu footer_menu-main">
+            <!--<li class = "footer_menu_item"><h2 class = "footer_menu_item_title">Menu</h2></li>-->
             <li class = "footer_menu_item"><a href="#" class = "footer_menu_item_link">About</a></li>
             <li class = "footer_menu_item"><a href="#" class = "footer_menu_item_link">Blog</a></li>
             <li class = "footer_menu_item"><a href="scrapbook.html" class = "footer_menu_item_link">Scrapbook</a></li>
             <li class = "footer_menu_item"><a href="#" class = "footer_menu_item_link">Projects</a></li>
             <li class = "footer_menu_item"><a href="#" class = "footer_menu_item_link">Contact</a></li>
           </ul>
+          <div class = "sub_footer">
+            <span class = "copyright_notice"><span class = "copyright_notice_title">Copyright</span> &copy; 2016 Mark Rudman</span>
+            <ul class = "footer_menu footer_menu-social">
+              <li class = "footer_menu_item">
+                <a href="#" class = "footer_menu_item_link">
+                  <span class = "icon icon-github footer_menu_item_link_icon"></span>
+                  <span class = "footer_menu_item_link_title">Github</span>
+                </a>
+              </li>
+              <li class = "footer_menu_item">
+                <a href="#" class = "footer_menu_item_link">
+                  <span class = "icon icon-instagram footer_menu_item_link_icon"></span>
+                  <span class = "footer_menu_item_link_title">Instagram</span>
+                </a>
+              </li>
+              <li class = "footer_menu_item">
+                <a href="#" class = "footer_menu_item_link">
+                  <span class = "icon icon-twitter footer_menu_item_link_icon"></span>
+                  <span class = "footer_menu_item_link_title">Twitter</span>
+                </a>
+              </li>
+              <li class = "footer_menu_item">
+                <a href="#" class = "footer_menu_item_link">
+                  <span class = "icon icon-email footer_menu_item_link_icon"></span>
+                  <span class = "footer_menu_item_link_title">Email</span>
+                </a>
+              </li>
+            </ul>
+          </div><!-- END sub_footer -->
       </footer><!-- main_footer -->
     </div><!-- root -->
     

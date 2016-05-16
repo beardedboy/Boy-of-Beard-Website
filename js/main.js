@@ -20,7 +20,18 @@
 			body.classList.toggle('no_scroll-sm_only');
 		});
 
+
+
 	/*** SCRAPBOOK ***********************/
+
+
+	var testOpen = document.getElementById('test'),
+		modal = document.getElementById('js-modal');
+
+	testOpen.addEventListener('click', function(event){
+			event.preventDefault();
+			modal.classList.toggle('modal-active');
+		});
 
 	/*var scrapbookClose = document.getElementById('js-close_scrapbook_container'),
 		scrapbookContainer = document.getElementById('js-scrapbook_container'),

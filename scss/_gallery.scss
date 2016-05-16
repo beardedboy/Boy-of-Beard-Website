@@ -8,7 +8,6 @@
 	position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,17 +29,34 @@
 
 .modal_main{
 	position: fixed;
-	left: 0;
+    left: 0;
     z-index: 5;
-    background-color: black;
-    width: 70vw;
-    height: 80vh;
-    margin: 10vh 15vw;
+    background-color: #000;
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh 5vw;
     box-shadow: 0 2px 2px rgba(0,0,0,.3);
-
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    transition: all 1s;
+    overflow: hidden;
+    padding-bottom: 4em;
+}
 
+.modal_main-vertical{
+	width: 60vw;
+	margin: 5vh 20vw;
+}
+
+.modal_main-horizontal{
+	height: 62vh;
+    width: 75vw;
+    margin: 19vh 12.5vw;
+}
+
+.modal_main-square{
+	width: 74vw;
+    margin: 5vh 13vw;
 }
 
 
@@ -51,6 +67,7 @@
     transform: translateX(-50%) translateY(-50%);
     max-width: 100%;
     max-height: 100%;
+    z-index: 1;
 }
 
 
@@ -58,6 +75,7 @@
   width: 100%; 
   height: auto; 
 }
+
 .fillheight { 
   height: 100%; 
   width: auto; 
@@ -66,21 +84,54 @@
 
 .modal_main_content{
 	position: relative;
-    display: flex;
-    flex-direction: row;
     flex-grow: 1; 
-    overflow: hidden;
-    justify-content: center;
+    //overflow: hidden;
     background-color: black;
-
     margin: 2em;
 }
 
+.modal_main_content_back_button, .modal_main_content_forward_button{
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	padding: 1em;
+	z-index: 5;
+	background-color: black;
+	line-height: 0;
+}
+
+.modal_main_content_back_button:hover, .modal_main_content_forward_button:hover{
+	background-color: gray;
+}
+
+.modal_main_content_back_button{
+	left: -2em;
+}
+
+.modal_main_content_forward_button{
+	right: -2em;
+}
+
 .modal_main_sidebar{
-    background-color: #add8e6;
-    padding: 2em;
-    flex-basis: 25em; 
-    overflow: auto;
+	position: relative;
+    bottom: -4em;
+}
+
+.modal_main_sidebar_content{
+	background-color: #add8e6;
+    padding: 1em;
+    flex-basis: 4em;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    height: 4em;
+    z-index: 10;
+    transition: height 1s;
+}
+
+.modal_main_sidebar_content-is_active{
+	height: 14em;
+	overflow: auto;
 }
 
 
@@ -98,8 +149,22 @@
 
 @media screen and (min-width: 800px){
 	.modal_main{
-		/*flex-direction: row;
-		margin: 5em auto;
-    	width: 707px;*/
+		flex-direction: row;
+		padding-bottom: 0;
 	}
+	
+	.modal_main_sidebar{
+		position: static;
+		flex-basis: 19em;
+		overflow: auto;
+	}
+
+	.modal_main_sidebar_content{
+		position: static;
+	    padding: 2em; 
+    	height: auto;
+    	overflow: auto;
+	}
+
+
 }

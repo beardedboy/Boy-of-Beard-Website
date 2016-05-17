@@ -26,12 +26,18 @@
 
 
 	var testOpen = document.getElementById('test'),
+		modalBG = document.getElementById('js-modal_bg'),
+		modalCloseBtn = document.getElementById('js-modal_close'),
 		modal = document.getElementById('js-modal');
 
-	testOpen.addEventListener('click', function(event){
-			event.preventDefault();
-			modal.classList.toggle('modal-active');
-		});
+	testOpen.addEventListener('click', toggleModalVisibility,false);
+	modalBG.addEventListener( 'click', toggleModalVisibility,false );
+	modalCloseBtn.addEventListener( 'click', toggleModalVisibility,false );
+
+	function toggleModalVisibility(){
+		event.preventDefault();
+		modal.classList.toggle('modal-active');
+	}
 
 	/*var scrapbookClose = document.getElementById('js-close_scrapbook_container'),
 		scrapbookContainer = document.getElementById('js-scrapbook_container'),

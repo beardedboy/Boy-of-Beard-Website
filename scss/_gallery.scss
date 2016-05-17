@@ -41,7 +41,14 @@
     transition: all 1s;
     overflow: hidden;
     padding-bottom: 4em;
+    background: linear-gradient(225deg, #333333 25%, transparent 25%) -25px 0,
+				linear-gradient(135deg, #333333 25%, transparent 25%) 25px 0,
+				linear-gradient(315deg, #333333 25%, transparent 25%),
+				linear-gradient(45deg, #333333 25%, transparent 25%);	
+	background-size: 50px 50px;
+	background-color: #2a2a2a;
 }
+
 
 .modal_main-vertical{
 	width: 60vw;
@@ -85,8 +92,6 @@
 .modal_main_content{
 	position: relative;
     flex-grow: 1; 
-    //overflow: hidden;
-    background-color: black;
     margin: 2em;
 }
 

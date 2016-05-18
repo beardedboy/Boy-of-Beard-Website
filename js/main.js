@@ -34,7 +34,7 @@
 	modalBG.addEventListener( 'click', toggleModalVisibility,false );
 	modalCloseBtn.addEventListener( 'click', toggleModalVisibility,false );
 
-	function toggleModalVisibility(){
+	function toggleModalVisibility(event){
 		event.preventDefault();
 		modal.classList.toggle('modal-active');
 	}

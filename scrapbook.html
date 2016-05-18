@@ -17,9 +17,10 @@
     <div id = "js-root" class = "root">
       <header class = "main_header">
         <a class = "main_logo_link" href="index.html">
-          <object type="image/svg+xml" data="img/mainlogo.svg" class="main_logo">
-            <img src="png/mainlogo.png" /><!-- fallback image in CSS -->
-          </object><!-- END main_logo -->
+          ​<picture>
+             <source srcset="img/mainlogo.svg" class="main_logo" type="image/svg+xml">
+             <img src="png/mainlogo.png" alt="MDN">
+          </picture>
         </a><!-- END main_logo_link -->
 
         <div class = "nav_container">
@@ -75,19 +76,111 @@
           </div>
           <div class = "scrapbook_img_container" id="js-scrapbook_img_container">
             <a href="#" class = "scrapbook_img" data-order="0" data-title="Postcard" data-desc="A fun postcard I found in a little coffee shop">
-              <img src="img/scrapbook/image1.jpg" alt="image 1"/>            
+              <picture>
+                <source srcset="img/scrapbook/image1-600w.jpg 1x, img/scrapbook/image1-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image1-400w.jpg 1x, img/scrapbook/image1-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image1-200w.jpg 1x, img/scrapbook/image1-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image1.jpg" alt="Image 1">
+              </picture>            
             </a>
-            <a href="#" class = "scrapbook_img" data-order="1"><img src="img/scrapbook/image2.jpg" alt="image 2"/></a>
-            <a href="#" class = "scrapbook_img" data-order="2"><img src="img/scrapbook/image3.jpg" alt="image 3"/></a>
-            <a href="#" class = "scrapbook_img" data-order="3"><img src="img/scrapbook/image4.jpg" alt="image 4"/></a>
-            <a href="#" class = "scrapbook_img" data-order="4"><img src="img/scrapbook/image5.jpg" alt="image 5"/></a>
-            <a href="#" class = "scrapbook_img" data-order="5"><img src="img/scrapbook/image6.jpg" alt="image 6"/></a>
-            <a href="#" class = "scrapbook_img" data-order="6"><img src="img/scrapbook/image7.jpg" alt="image 7"/></a>
-            <a href="#" class = "scrapbook_img" data-order="7"><img src="img/scrapbook/image8.jpg" alt="image 8"/></a>
-            <a href="#" class = "scrapbook_img" id="test" data-order="8"><img src="img/scrapbook/image9.jpg" alt="image 9"/></a>
-            <a href="#" class = "scrapbook_img" data-order="9"><img src="img/scrapbook/image10.jpg" alt="image 10"/></a>
-            <a href="#" class = "scrapbook_img" data-order="10"><img src="img/scrapbook/image11.jpg" alt="image 11"/></a>
-            <a href="#" class = "scrapbook_img" data-order="11"><img src="img/scrapbook/image12.jpg" alt="image 12"/></a>
+            <a href="#" class = "scrapbook_img" data-order="1">
+              <picture>
+                <source srcset="img/scrapbook/image2-600w.jpg 1x, img/scrapbook/image2-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image2-400w.jpg 1x, img/scrapbook/image2-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image2-200w.jpg 1x, img/scrapbook/image2-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image2.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="2">
+              <picture>
+                <source srcset="img/scrapbook/image3-600w.jpg 1x, img/scrapbook/image3-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image3-400w.jpg 1x, img/scrapbook/image3-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image3-200w.jpg 1x, img/scrapbook/image3-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image3.jpg" alt="Image 3">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="3">
+              <picture>
+                <source srcset="img/scrapbook/image4-600w.jpg 1x, img/scrapbook/image4-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image4-400w.jpg 1x, img/scrapbook/image4-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image4-200w.jpg 1x, img/scrapbook/image4-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image4.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="4">
+              <picture>
+                <source srcset="img/scrapbook/image5-600w.jpg 1x, img/scrapbook/image5-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image5-400w.jpg 1x, img/scrapbook/image5-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image5-200w.jpg 1x, img/scrapbook/image5-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image5.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="5">
+              <picture>
+                <source srcset="img/scrapbook/image6-600w.jpg 1x, img/scrapbook/image6-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image6-400w.jpg 1x, img/scrapbook/image6-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image6-200w.jpg 1x, img/scrapbook/image6-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image6.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="6">
+              <picture>
+                <source srcset="img/scrapbook/image7-600w.jpg 1x, img/scrapbook/image7-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image7-400w.jpg 1x, img/scrapbook/image7-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image7-200w.jpg 1x, img/scrapbook/image7-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image7.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="7">
+              <picture>
+                <source srcset="img/scrapbook/image8-600w.jpg 1x, img/scrapbook/image8-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image8-400w.jpg 1x, img/scrapbook/image8-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image8-200w.jpg 1x, img/scrapbook/image8-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image2.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" id="test" data-order="8">
+              <picture>
+                <source srcset="img/scrapbook/image9-600w.jpg 1x, img/scrapbook/image9-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image9-400w.jpg 1x, img/scrapbook/image9-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image9-200w.jpg 1x, img/scrapbook/image9-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image9.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="9">
+              <picture>
+                <source srcset="img/scrapbook/image10-600w.jpg 1x, img/scrapbook/image10-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image10-400w.jpg 1x, img/scrapbook/image10-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image10-200w.jpg 1x, img/scrapbook/image10-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image10.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="10">
+              <picture>
+                <source srcset="img/scrapbook/image11-600w.jpg 1x, img/scrapbook/image11-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image11-400w.jpg 1x, img/scrapbook/image11-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image11-200w.jpg 1x, img/scrapbook/image11-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image11.jpg" alt="Image 2">
+              </picture>
+            </a>
+            
+            <a href="#" class = "scrapbook_img" data-order="11">
+              <picture>
+                <source srcset="img/scrapbook/image12-600w.jpg 1x, img/scrapbook/image12-1200w.jpg 2x" media="(min-width: 800px)">
+                <source srcset="img/scrapbook/image12-400w.jpg 1x, img/scrapbook/image12-600w.jpg 2x" media="(min-width: 400px)">
+                <source srcset="img/scrapbook/image12-200w.jpg 1x, img/scrapbook/image12-400w.jpg 2x" media="(min-width: 0px)">
+                <img srcset="img/scrapbook/image12.jpg" alt="Image 2">
+              </picture>
+            </a>
 
           </div><!-- END scrapbook_img_container -->
 

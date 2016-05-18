@@ -2751,6 +2751,10 @@ html {
   background: url("../img/icons.svg#arrow-right") no-repeat left top;
 }
 
+.zoom-in {
+  background: url("../img/icons.svg#zoom-in") no-repeat left top;
+}
+
 /* ==========================================================================
 	Typography
 ========================================================================== */
@@ -3277,8 +3281,8 @@ h2 {
 
 .scrapbook_img {
   position: relative;
-  height: 187px;
   flex-basis: 50%;
+  line-height: 0;
   overflow: hidden;
 }
 .scrapbook_img:after {
@@ -3444,6 +3448,22 @@ h2 {
   margin: 5vh 13vw;
 }
 
+.modal_main_img_container {
+  cursor: pointer;
+}
+
+.modal_main_img_zoom_button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../img/icons.svg#zoom-in") no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+}
+
 .modal_main_img {
   position: absolute;
   top: 50%;
@@ -3452,6 +3472,16 @@ h2 {
   max-width: 100%;
   max-height: 100%;
   z-index: 1;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.modal_main_img:before {
+  content: '';
+  position: absolute;
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  z-index: 99999;
 }
 
 .fillwidth {
@@ -3501,10 +3531,10 @@ h2 {
 .modal_main_sidebar {
   position: relative;
   bottom: -4em;
+  background-color: #add8e6;
 }
 
 .modal_main_sidebar_content {
-  background-color: #add8e6;
   padding: 1em;
   flex-basis: 4em;
   overflow: hidden;
@@ -3528,6 +3558,34 @@ h2 {
   left: 0;
   bottom: 0;
   z-index: 1;
+}
+
+/** Zoomed in changes **/
+.modal_main_content-zoomed_in {
+  margin: 0;
+  overflow: auto;
+}
+
+.modal_main_content-zoomed_in .modal_main_img {
+  top: 0;
+  left: 0;
+  transform: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+.modal_main_content-zoomed_in .modal_main_content_forward_button,
+.modal_main_content-zoomed_in .modal_main_content_back_button {
+  display: none;
+}
+
+.modal_main_content-zoomed_in .modal_main_img_zoom_button {
+  background: url("../img/icons.svg#zoom-out") no-repeat 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: none;
+  z-index: 10;
 }
 
 @media screen and (min-width: 500px) {

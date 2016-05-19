@@ -25,13 +25,18 @@
 	/*** SCRAPBOOK ***********************/
 
 
-	var testOpen = document.getElementById('test'),
-		modalBG = document.getElementById('js-modal_bg'),
+	/******************************************************
+	* 
+	* Functionality to show / hide the gallery window 
+	*
+	******************************************************/
+
+	var modalBG = document.getElementById('js-modal_bg'),
 		modalCloseBtn = document.getElementById('js-modal_close'),
 		modal = document.getElementById('js-modal'),
 		modalMainContent = document.getElementById('js-modal_main_content');
 
-	testOpen.addEventListener('click', toggleModalVisibility,false);
+
 	modalBG.addEventListener( 'click', toggleModalVisibility,false );
 	modalCloseBtn.addEventListener( 'click', toggleModalVisibility,false );
 
@@ -40,12 +45,30 @@
 		modal.classList.toggle('modal-active');
 	}
 
-	var zoom = document.getElementById('js-modal_zoom_in');
 
-	zoom.addEventListener('click', function(ev){
+	/******************************************************
+	* 
+	* Functionality to zoom in out on chosen image 
+	*
+	******************************************************/
+
+	var zoomBtn = document.getElementById('js-modal_zoom_in');
+
+	zoomBtn.addEventListener('click', function(ev){
 		ev.preventDefault();
 		modalMainContent.classList.toggle('modal_main_content-zoomed_in');
 	});
+
+
+	/******************************************************
+	* 
+	* Functionality to scroll between images 
+	*
+	******************************************************/
+
+	var forwardBtn = document.getElementById('js-modal_main_content-forward_button'),
+		backBtn = document.getElementById('js-modal_main_content-back_button');
+
 	/*var scrapbookClose = document.getElementById('js-close_scrapbook_container'),
 		scrapbookContainer = document.getElementById('js-scrapbook_container'),
 		scrapbookImages = document.getElementsByClassName('scrapbook_img'),

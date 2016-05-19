@@ -67,7 +67,7 @@
 
 
 
-.modal_main-vertical{
+/*.modal_main-vertical{
 	width: 60vw;
 	margin: 5vh 20vw;
 }
@@ -81,7 +81,7 @@
 .modal_main-square{
 	width: 74vw;
     margin: 5vh 13vw;
-}
+}*/
 
 .modal_main_img_container{
 	cursor: pointer;
@@ -89,6 +89,7 @@
 
 .modal_main_img_zoom_button{
 	display: inline-block;
+	opacity: 0;
     width: 30px;
     height: 30px;
     background: url('../img/icons.svg#zoom-in') no-repeat 0 0;
@@ -97,6 +98,11 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 10;
+}
+
+
+.modal_main_img_zoom_button:hover{
+	opacity: 1;
 }
 
 .modal_main_img{
@@ -120,7 +126,7 @@
 }
 
 
-.fillwidth { 
+/*.fillwidth { 
   width: 100%; 
   height: auto; 
 }
@@ -128,7 +134,7 @@
 .fillheight { 
   height: 100%; 
   width: auto; 
-}
+}*/
 
 
 .modal_main_content{
@@ -174,6 +180,7 @@
 .modal_main_sidebar_content{
     padding: 1em;
     flex-basis: 4em;
+    background-color: #add8e6;
     overflow: hidden;
     position: absolute;
     bottom: 0;

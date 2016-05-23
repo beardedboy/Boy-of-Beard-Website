@@ -3447,8 +3447,20 @@ h2 {
 	width: 74vw;
     margin: 5vh 13vw;
 }*/
-.modal_main_img_container {
-  cursor: pointer;
+.modal_gallery_container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_img_container {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  overflow: hidden;
 }
 
 .modal_main_img_zoom_button {
@@ -3469,7 +3481,7 @@ h2 {
 }
 
 .modal_main_img {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -3479,15 +3491,14 @@ h2 {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.modal_main_img:before {
-  content: '';
-  position: absolute;
-  background-color: yellow;
-  width: 200px;
-  height: 200px;
-  z-index: 99999;
-}
-
+/*.modal_main_img:before{
+    content: '';
+    position: absolute;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    z-index: 99999;
+}*/
 /*.fillwidth { 
   width: 100%; 
   height: auto; 
@@ -3497,10 +3508,17 @@ h2 {
   height: 100%; 
   width: auto; 
 }*/
-.modal_main_content {
+.modal_main_content-outer {
   position: relative;
   flex-grow: 1;
   margin: 2em;
+}
+
+.modal_main_content-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .modal_main_content_back_button, .modal_main_content_forward_button {
@@ -3545,6 +3563,7 @@ h2 {
   position: absolute;
   bottom: 0;
   height: 4em;
+  width: 100%;
   z-index: 10;
   transition: height 1s;
 }
@@ -3628,6 +3647,11 @@ h2 {
     height: auto;
     overflow: auto;
   }
+
+  .modal_img_container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @keyframes modalMoveUp {
   from {
@@ -3641,7 +3665,7 @@ h2 {
 	Helper Functions
 ========================================================================== */
 /*** Helpers ********************************/
-.no_scroll-sm_only {
+.no_scroll, .no_scroll-sm_only {
   overflow-y: hidden;
 }
 

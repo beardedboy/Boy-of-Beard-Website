@@ -3647,10 +3647,18 @@ h2 {
     height: auto;
     overflow: auto;
   }
-
+}
+@media screen and (min-width: 1000px) {
   .modal_img_container {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .modal_main {
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
   }
 }
 @keyframes modalMoveUp {

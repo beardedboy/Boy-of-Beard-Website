@@ -4,6 +4,7 @@ module.exports = function(grunt){
 
     var modules = [
         'grunt-contrib-jshint',
+        'grunt-contrib-uglify',
         'grunt-contrib-sass',
         'grunt-cssnano',
         'grunt-postcss',
@@ -18,7 +19,21 @@ module.exports = function(grunt){
 
      grunt.initConfig({
          jshint:{
-             all: ['js/*.js']
+             all: ['js/modules/*.js']
+         },
+         uglify: {
+             my_target: {
+                 options:{
+                     preserveComments: 'some',
+                     mangle: false,
+                     sourceMap: true
+                 },
+                 files: {
+                    'js/main.js': [
+                        'js/modules/*.js'
+                    ]
+                 }
+             }
          },
          sass:{
              dist: {
@@ -72,7 +87,7 @@ module.exports = function(grunt){
      });
 
 
-    grunt.registerTask('js', ['jshint']);
+    grunt.registerTask('js', ['jshint', 'uglify']);
     grunt.registerTask('css', ['sass', 'postcss:dist', 'cssnano']);
     grunt.registerTask('default', ['sass', 'postcss:dist', 'cssnano', 'watch']);
 

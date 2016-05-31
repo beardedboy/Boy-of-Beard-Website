@@ -21,6 +21,8 @@
 		//Clickable elements
 		modalBG = document.getElementById('js-modal_bg'),
 		modalCloseBtn = document.getElementById('js-modal_close'),
+		/* Put scrapbook images length into array */
+		/* querySelectorAll - pg. 49 */
 		scrapbookImages = document.getElementsByClassName('scrapbook_img'),
 		scrapbookImagesTotal = scrapbookImages.length,
 
@@ -39,14 +41,16 @@
 
 	var frag = document.createDocumentFragment();
 
+	/* Access length as array and put in variable before using in loop Pg. 44 */
 	for( var i = 0; i < scrapbookImages.length; i++ ){
-			scrapbookImages[i].addEventListener('click', toggleModalVisible.bind(null, i), false );
+			
+		scrapbookImages[i].addEventListener('click', toggleModalVisible.bind(null, i), false );
 
-			var span = document.createElement("span");
-			span.classList.add('modal_img_container');
-			frag.appendChild(span);
+		var span = document.createElement("span");
+		span.classList.add('modal_img_container');
+		frag.appendChild(span);
 
-		}
+	}
 
 	modalImageContainer.appendChild(frag);
 

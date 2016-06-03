@@ -14,41 +14,42 @@
 	*
 	******************************************************/
 
-	var body = document.body,
-		modal = document.getElementById('js-modal'),
-		modalMainContent = document.getElementById('js-modal_main_content'),
+	var doc = document,
+		body = doc.body,
+		modal = doc.getElementById('js-modal'),
+		modalMainContent = doc.getElementById('js-modal_main_content'),
 
 		//Clickable elements
-		modalBG = document.getElementById('js-modal_bg'),
-		modalCloseBtn = document.getElementById('js-modal_close'),
+		modalBG = doc.getElementById('js-modal_bg'),
+		modalCloseBtn = doc.getElementById('js-modal_close'),
 		/* Put scrapbook images length into array */
 		/* querySelectorAll - pg. 49 */
-		scrapbookImages = document.getElementsByClassName('scrapbook_img'),
-		scrapbookImagesTotal = scrapbookImages.length,
+		scrapbookImages = doc.querySelectorAll('.scrapbook_img'),
+		scrapbookImagesLength = scrapbookImages.length,
 
-		modalImageContainer = document.getElementById('js-modal_gallery_container'),
-		currentImageTitle = document.getElementById('js-modal_main_sidebar_content_title'),
-		currentImageDesc = document.getElementById('js-modal_main_sidebar_content_desc'),
+		modalImageContainer = doc.getElementById('js-modal_gallery_container'),
+		currentImageTitle = doc.getElementById('js-modal_main_sidebar_content_title'),
+		currentImageDesc = doc.getElementById('js-modal_main_sidebar_content_desc'),
 
-		previousBtn = document.getElementById('js-modal_main_content-previous_button'),
-		nextBtn = document.getElementById('js-modal_main_content-next_button');
+		previousBtn = doc.getElementById('js-modal_main_content-previous_button'),
+		nextBtn = doc.getElementById('js-modal_main_content-next_button');
 
 
 
 	modalBG.addEventListener( 'click', toggleModalHide,false );
 	modalCloseBtn.addEventListener( 'click', toggleModalHide,false );
+ 
 
-
-	var frag = document.createDocumentFragment();
+	var frag = doc.createDocumentFragment();
 
 	/* Access length as array and put in variable before using in loop Pg. 44 */
-	for( var i = 0; i < scrapbookImages.length; i++ ){
+	for( var i = 0; i < scrapbookImagesLength; i++ ){
 			
 		scrapbookImages[i].addEventListener('click', toggleModalVisible.bind(null, i), false );
 
-		var span = document.createElement("span");
+		var span = doc.createElement("span");
 		span.classList.add('modal_img_container');
-		frag.appendChild(span);
+		frag.appendChild(span); 
 
 	}
 
@@ -69,12 +70,12 @@
 		var order = scrapbookImages[index].getAttribute('data-order'),
 			title = scrapbookImages[index].getAttribute('data-title'),
 			desc = scrapbookImages[index].getAttribute('data-desc'),
-			containers = document.getElementsByClassName('modal_img_container');
+			containers = doc.getElementsByClassName('modal_img_container');
 
 		if( containers[index].innerHTML === "" ){
 
 			//Injects the active image into the DOM 
-			var newImg = document.createElement('img');
+			var newImg = doc.createElement('img');
 			newImg.classList.add('modal_main_img');
 			newImg.src = "img/scrapbook/image"+ order + ".jpg";
 			newImg.alt = desc;
@@ -107,7 +108,7 @@
 	*
 	******************************************************/
 
-	/*var zoomBtn = document.getElementById('js-modal_zoom_in');
+	/*var zoomBtn = doc.getElementById('js-modal_zoom_in');
 
 	zoomBtn.addEventListener('click', function(ev){
 		ev.preventDefault();
@@ -121,9 +122,9 @@
 	*
 	******************************************************/
 
-	var forwardBtn = document.getElementById('js-modal_main_content-next_button'),
-		backBtn = document.getElementById('js-modal_main_content-previous_button'),
-		containers = document.getElementsByClassName('modal_img_container');
+	var forwardBtn = doc.getElementById('js-modal_main_content-next_button'),
+		backBtn = doc.getElementById('js-modal_main_content-previous_button'),
+		containers = doc.getElementsByClassName('modal_img_container');
 
 	forwardBtn.addEventListener('click', goForward, false);
 	backBtn.addEventListener('click', goBack, false);
@@ -134,7 +135,7 @@
 
 		var nextNo = Number( forwardBtn.getAttribute('data-next') );
 
-		if (nextNo > scrapbookImagesTotal){
+		if (nextNo > scrapbookImagesLength){
 			return;
 		}
 
@@ -154,7 +155,7 @@
 		if(containers[nextNo - 1].innerHTML === ""){
 
 			//Injects the active image into the DOM 
-			var newImg = document.createElement('img');
+			var newImg = doc.createElement('img');
 			newImg.classList.add('modal_main_img');
 			newImg.src = "img/scrapbook/image"+ nextNo + ".jpg";
 			newImg.alt = desc;
@@ -201,7 +202,7 @@
 		if(containers[previousNo - 1].innerHTML === ""){
 
 			//Injects the active image into the DOM 
-			var newImg = document.createElement('img');
+			var newImg = doc.createElement('img');
 			newImg.classList.add('modal_main_img');
 			newImg.src = "img/scrapbook/image"+ previousNo + ".jpg";
 			//newImg.alt = desc;
@@ -215,10 +216,10 @@
 
 	}
 
-	/*var scrapbookClose = document.getElementById('js-close_scrapbook_container'),
-		scrapbookContainer = document.getElementById('js-scrapbook_container'),
-		scrapbookImages = document.getElementsByClassName('scrapbook_img'),
-		scrapbookImageContainer = document.getElementById('js-scrapbook_img_container');
+	/*var scrapbookClose = doc.getElementById('js-close_scrapbook_container'),
+		scrapbookContainer = doc.getElementById('js-scrapbook_container'),
+		scrapbookImages = doc.getElementsByClassName('scrapbook_img'),
+		scrapbookImageContainer = doc.getElementById('js-scrapbook_img_container');
 
 		var clickable = true;
 

@@ -481,7 +481,6 @@ html {
 }
 
 .container-no_padding {
-  max-width: 1140px;
   padding-left: 0;
   padding-right: 0;
   margin-right: auto;
@@ -2698,23 +2697,6 @@ html {
     clear: none;
   }
 }
-/* ==========================================================================
-   Presentation
-   ========================================================================== */
-.pres-heading {
-  line-height: 100px;
-  margin: 0;
-}
-
-[class^=grid_col] h3 {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  line-height: 40px;
-  font-size: 13px;
-  background-color: #ffcc66;
-}
-
 /* ==========================================================================
 	Icons
 ========================================================================== */

@@ -17,15 +17,16 @@
     <div id = "js-root" class = "root">
       <header class = "main_header">
         <a class = "main_logo_link" href="index.html">
-          <object type="image/svg+xml" data="img/mainlogo.svg" class="main_logo">
-            <img src="png/mainlogo.png" /><!-- fallback image in CSS -->
-          </object><!-- END main_logo -->
+          ​<picture>
+             <source srcset="img/mainlogo.svg" class="main_logo" type="image/svg+xml">
+             <img src="png/mainlogo.png" alt="MDN">
+          </picture>
         </a><!-- END main_logo_link -->
 
         <div class = "nav_container">
           <nav class = "main_nav" id = "js-main_nav">
             <a href="#menu-no_js" class = "main_nav_link" id = "js-main_nav_icon">
-              <svg class = "icon-black" id = "js-main_nav_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              <svg class = "icon icon-black" id = "js-main_nav_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              viewBox="0 0 64 64" xml:space="preserve">
                 <path class = "main_nav_icon-top" d="M57.9,0h-52C2.7,0,0,2.7,0,6c0,3.3,2.7,6,5.9,6h52c3.3,0,5.9-2.7,5.9-6C63.9,2.7,61.2,0,57.9,0z"/>
                 <path class = "main_nav_icon-bottom" d="M57.9,52h-52C2.7,52,0,54.7,0,58c0,3.3,2.7,6,5.9,6h52c3.3,0,5.9-2.7,5.9-6C63.9,54.7,61.2,52,57.9,52z"/>
@@ -61,10 +62,70 @@
       </header><!-- END main_header -->
 
       <section class = "container">
-        <section class = "main_intro">
-          <h1 class = "main_intro_title">Hi, welcome to my site.  I'm a <b>full stack web developer</b> based in <b>Bristol, UK</b>.  Feel free to check out my latest <a class = "main_intro_link" href="#">projects</a>, read my <a class = "main_intro_link" href="#">blog</a> or send me a <a class = "main_intro_link" href="#">message</a></h1>
-        </section>
-      </section> <!-- container -->
+        <h1 class = "main_title">Blog</h1>
+        
+        <div class = "grid_row">
+          <section class = "grid_col_sm-4_12 blog_sidebar">
+            <header class = "blog_sidebar_header">
+              <h3 class = "blog_sidebar_header_title">Filter</h3>
+              <span class = "blog_sidebar_header_icon"></span>
+            </header>
+
+            <h4 class = "blog_sidebar_header_subtitle">Categories</h4>
+            <a class = "blog_sidebar_filter_link">CSS</a>
+            <a class = "blog_sidebar_filter_link">HTML</a>
+            <a class = "blog_sidebar_filter_link">Node</a>
+            <a class = "blog_sidebar_filter_link">Web Development</a>
+            <a class = "blog_sidebar_filter_link">Design</a>
+
+            <h4 class = "blog_sidebar_header_subtitle">Year</h4>
+            <a class = "blog_sidebar_filter_link">2014</a>
+            <a class = "blog_sidebar_filter_link">2015</a>
+            <a class = "blog_sidebar_filter_link">2016</a>
+
+            <button class = "blog_sidebar_filter_btn">Apply Filter</button>
+          </section><!-- END grid_col_sm-4_12 -->
+
+          <section class = "grid_col_sm-8_12 blog_posts">
+            <a class = "blog_post" href="#">
+              <h2 class = "blog_post_title">My Mac Setup for a home server</h2>
+              <!-- add / as a :before on the date element -->
+              <time class = "blog_post_posted_date"> / 14th May 2016</time>
+              <!--<p class = "blog_post_desc">Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula. In sit amet justo lectus. Etiam feugiat dolor ac elit suscipit in elementum orci fringilla.</p>-->
+              <div class = "blog_post_categories">
+                <span class = "blog_post_category">Tech</span>
+                <span class = "blog_post_category">Apple</span>
+                <span class = "blog_post_category">Web Development</span>
+              </div>
+            </a><!-- END blog_post -->
+            <a class = "blog_post" href="blog/node_setup.html">
+              <h2 class = "blog_post_title">Setting up Node</h2>
+                           <h4 class = "blog_post_posted_date">14th May 2016</h4>
+              <!--<p class = "blog_post_desc">Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula. In sit amet justo lectus. Etiam feugiat dolor ac elit suscipit in elementum orci fringilla.</p>-->
+              <div class = "blog_post_categories">
+                <span class = "blog_post_category">Tech</span>
+                <span class = "blog_post_category">Apple</span>
+                <span class = "blog_post_category">Web Development</span>
+              </div>
+            </a><!-- END blog_post -->
+            <a class = "blog_post" href="#">
+              <h2 class = "blog_post_title">SASS Basics</h2>
+              <h4 class = "blog_post_posted_date">14th May 2016</h4>
+              <!--<p class = "blog_post_desc">Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula. In sit amet justo lectus. Etiam feugiat dolor ac elit suscipit in elementum orci fringilla.</p>-->
+              <div class = "blog_post_categories">
+                <span class = "blog_post_category">Tech</span>
+                <span class = "blog_post_category">Apple</span>
+                <span class = "blog_post_category">Web Development</span>
+              </div>
+            </a><!-- END blog_post -->
+          </section><!-- END grid_col_sm-8_12 -->
+        </div><!-- END grid_row -->
+
+        <div class = "grid_row">
+          <nav class = "grid_col_sm-12_12 pagination">
+            <a class = "next_posts">Next posts</a>
+          </nav>
+        <div>
         
       </section> <!-- END container -->
 
